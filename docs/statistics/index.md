@@ -1,8 +1,8 @@
-# 수리통계 (Mathematical Statistics)
+# Mathematical Statistics
 
-추정·검정·확률분포 등 통계학의 이론적 기반을 정리합니다.
+Notes on the theoretical foundations of statistics — estimation, testing, and distributions.
 
-## 목차
+## Contents
 
-- [최대우도추정 (MLE)](mle.md)
-- ⟨추가할 주제⟩ — 예: 충분통계량, 신뢰구간, 가설검정, 베이즈 추정 …
+- [Maximum Likelihood Estimation (MLE)](mle.md)
+- ⟨Add topics⟩ — e.g. Sufficient statistics, Confidence intervals, Hypothesis testing, Bayesian estimation …

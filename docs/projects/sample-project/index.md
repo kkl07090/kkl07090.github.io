@@ -1,53 +1,52 @@
-# ⟨프로젝트 제목⟩
+# ⟨Project Title⟩
 
-> 한 줄 요약: ⟨무엇을, 어떤 데이터로, 어떤 결과를 냈는지⟩
+> One-line summary: ⟨what you did, on what data, with what result⟩
 
-| 항목 | 내용 |
-|------|------|
-| 기간 | 20XX.XX ~ 20XX.XX |
-| 유형 | 개인 / 팀 (N명) |
-| 역할 | ⟨담당 부분⟩ |
-| 기술 스택 | Python, pandas, scikit-learn … |
+| Field | Detail |
+|-------|--------|
+| Period | 20XX.XX – 20XX.XX |
+| Type | Solo / Team (N people) |
+| Role | ⟨your part⟩ |
+| Stack | Python, pandas, scikit-learn … |
 
-## 1. 배경 / 문제 정의
+## 1. Background / Problem
 
-무슨 문제를 왜 풀려고 했는지. <!-- TODO -->
+What problem you set out to solve, and why. <!-- TODO -->
 
-## 2. 데이터
+## 2. Data
 
-- 출처 · 크기 · 주요 변수
-- 전처리 요약
+- Source · size · key variables
+- Preprocessing summary
 
-## 3. 방법
+## 3. Method
 
-접근 방식, 모델, 실험 설계. 필요하면 수식·다이어그램 포함.
+Approach, model, experiment design. Add math or diagrams if useful.
 
 ```python
-# 핵심 코드 스니펫 (전체는 code/ 폴더 참고)
+# Key snippet (full code in the code/ folder)
 def main():
     ...
 ```
 
-## 4. 결과
+## 4. Results
 
-- 핵심 성능 지표 (표/그래프)
-- 그래프 이미지는 이 폴더에 넣고 `![설명](그림.png)` 로 삽입
+- Key metrics (tables / plots)
+- Put plot images in this folder and insert with `![caption](plot.png)`
 
-## 5. 회고
+## 5. Retrospective
 
-- 잘된 점 / 아쉬운 점 / 다음에 개선할 점
+- What went well / what didn't / what to improve next time
 
-## 발표자료 (PPT)
+## Slides
 
-PPT는 **PDF로 변환**해 이 폴더(`docs/projects/sample-project/`)에 `slides.pdf` 로 넣으세요.
-그러면 아래 코드로 페이지에 그대로 임베드할 수 있습니다. (파일을 넣은 뒤 아래 블록의 백틱을 지우고 사용)
+Export your slides to **PDF**, place `slides.pdf` in this folder (`docs/projects/sample-project/`), then embed it (remove the backticks after adding the file):
 
 ```html
 <object data="slides.pdf" type="application/pdf" width="100%" height="600px">
-  <a href="slides.pdf">발표자료 내려받기</a>
+  <a href="slides.pdf">Download slides</a>
 </object>
 ```
 
-## 코드
+## Code
 
-전체 코드는 이 프로젝트의 `code/` 폴더에 `.py` 파일로 넣으세요.
+Put your `.py` files in this project's `code/` folder.

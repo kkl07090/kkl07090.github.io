@@ -1,11 +1,11 @@
 # ML · DL
 
-머신러닝과 딥러닝의 핵심 개념을 정리합니다.
+Notes on core machine learning and deep learning concepts.
 
-## 목차
+## Contents
 
-- [경사하강법 (Gradient Descent)](gradient-descent.md)
-- ⟨추가할 주제⟩ — 예: 로지스틱 회귀, 정규화(Regularization), CNN, Transformer …
+- [Gradient Descent](gradient-descent.md)
+- ⟨Add topics⟩ — e.g. Logistic Regression, Regularization, CNN, Transformer …
 
-!!! tip "새 글 추가하는 법"
-    이 폴더(`docs/ml-dl/`)에 `.md` 파일을 만들고, `mkdocs.yml`의 `nav:`에 한 줄 추가하면 메뉴에 나타납니다.
+!!! tip "Adding a note"
+    Create a `.md` file in this folder (`docs/ml-dl/`) and add one line under `nav:` in `mkdocs.yml` to show it in the menu.

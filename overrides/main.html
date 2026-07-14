@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+<!-- 커스텀 상단 네비게이션: 우측 상단, 초록 글씨, 투명 (기본 헤더/검색/타이틀 제거) -->
+{% block header %}
+  {% set u = page.url if page else '' %}
+  <header class="topbar" data-md-component="header">
+    <nav class="topbar__nav" aria-label="Main navigation">
+      <a href="{{ base_url }}/"{% if page and page.is_homepage %} class="is-active"{% endif %}>Home</a>
+      <a href="{{ base_url }}/cv/"{% if u.startswith('cv') %} class="is-active"{% endif %}>CV</a>
+      <a href="{{ base_url }}/projects/"{% if u.startswith('projects') %} class="is-active"{% endif %}>Project History</a>
+      <a href="{{ base_url }}/major-knowledge/"{% if u.startswith('major-knowledge') or u.startswith('ml-dl') or u.startswith('time-series') or u.startswith('statistics') or u.startswith('finance') %} class="is-active"{% endif %}>Major Knowledge</a>
+      <a href="{{ base_url }}/gallery/"{% if u.startswith('gallery') %} class="is-active"{% endif %}>Gallery</a>
+      <a href="{{ base_url }}/research/"{% if u.startswith('research') %} class="is-active"{% endif %}>Research Paper</a>
+    </nav>
+  </header>
+{% endblock %}

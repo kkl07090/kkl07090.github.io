@@ -1,28 +1,214 @@
-/* 사이트 커스텀 스타일 */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap');
 
-/* 홈 히어로 영역 */
+/* =====================================================================
+   Warm portfolio theme — 60 Ivory/Cream · 30 Sage Green · 10 Oak Brown
+   ===================================================================== */
+
+:root {
+  --md-text-font: "Nunito";
+  --md-code-font: "JetBrains Mono";
+
+  --sage:       #7E9463;
+  --sage-deep:  #556B3D;
+  --sage-soft:  #AFC095;
+  --oak:        #9A6A3B;
+  --oak-deep:   #7A5228;
+  --oak-soft:   #C9A574;
+}
+
+/* ---- LIGHT (primary): 60 cream / 30 sage / 10 oak ---- */
+[data-md-color-scheme="default"] {
+  --md-default-bg-color:          #F4EEDF;   /* 60% ivory/cream */
+  --md-default-bg-color--light:   #FBF7EC;
+  --md-default-fg-color:          #3B372B;   /* warm dark ink */
+  --md-default-fg-color--light:   #6B6552;
+  --md-default-fg-color--lighter: #A69E86;
+  --md-default-fg-color--lightest:#E0D6BF;
+
+  --md-primary-fg-color:          #647A47;   /* 30% sage — header */
+  --md-primary-fg-color--dark:    #556B3D;
+  --md-primary-bg-color:          #F7F2E5;
+
+  --md-accent-fg-color:           #556B3D;
+  --md-typeset-a-color:           #5E7A3A;
+  --md-code-bg-color:             #EEE7D4;
+  --md-code-fg-color:             #4A4636;
+
+  --hero-glow: #E7ECD6;
+  --hero-role: #556B3D;
+  --surface:   #FBF7EC;
+  --border:    #E3D9C2;
+}
+
+/* ---- DARK (warm dark) ---- */
+[data-md-color-scheme="slate"] {
+  --md-default-bg-color:          #241F18;
+  --md-default-bg-color--light:   #2B261D;
+  --md-default-fg-color:          #EDE6D6;
+  --md-default-fg-color--light:   #C3BAA5;
+  --md-default-fg-color--lighter: #8B8368;
+  --md-default-fg-color--lightest:#3D382C;
+
+  --md-primary-fg-color:          #2E2A20;
+  --md-primary-fg-color--dark:    #211D15;
+  --md-primary-bg-color:          #EDE6D6;
+
+  --md-accent-fg-color:           #A6BC86;
+  --md-typeset-a-color:           #B0C592;
+  --md-code-bg-color:             #2B261D;
+  --md-code-fg-color:             #D8CFBA;
+
+  --hero-glow: #2C2820;
+  --hero-role: #A6BC86;
+  --surface:   #2B261D;
+  --border:    #3D382C;
+}
+
+/* =====================================================================
+   Typography — heavier weights (fix thin default headings)
+   ===================================================================== */
+body, .md-typeset { font-weight: 500; }
+.md-typeset h1 { font-weight: 800; letter-spacing: -.02em; color: var(--md-default-fg-color); }
+.md-typeset h2 { font-weight: 800; letter-spacing: -.01em;
+  border-bottom: 1px solid var(--border); padding-bottom: .3rem; }
+.md-typeset h3 { font-weight: 700; }
+.md-typeset h4, .md-typeset strong, .md-typeset b { font-weight: 700; }
+.md-header__title, .md-tabs__link, .md-nav__link { font-weight: 600; }
+.md-tabs__link--active { font-weight: 800; opacity: 1; }
+.md-nav__link--active { color: var(--sage-deep) !important; font-weight: 700; }
+
+/* =====================================================================
+   HERO (home)
+   ===================================================================== */
 .hero {
-  text-align: center;
-  padding: 2rem 0 1rem;
+  position: relative;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  margin-top: -1.2rem;
+  min-height: 78vh;
+  display: flex; align-items: center; overflow: hidden;
+  background: radial-gradient(120% 130% at 80% 0%, var(--hero-glow) 0%, var(--md-default-bg-color) 60%);
 }
-
-.hero .tagline {
-  font-size: 1.1rem;
-  opacity: 0.8;
+.hero__canvas { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 0; pointer-events: none; }
+.hero__inner {
+  position: relative; z-index: 1;
+  width: 100%; max-width: 60rem; margin: 0 auto;
+  padding: 3rem 1.5rem; color: var(--md-default-fg-color);
 }
+/* 글자 뒤 은은한 크림 스크림 — 물결이 글자를 침범하지 않고 배경에서만 흐르게 */
+.hero__inner::before {
+  content: ""; position: absolute; inset: -2rem -3rem; z-index: -1;
+  pointer-events: none;
+  background: radial-gradient(58% 68% at 30% 46%,
+      var(--md-default-bg-color) 0%,
+      var(--md-default-bg-color) 22%,
+      transparent 72%);
+  opacity: .82;
+}
+.hero__socials { display: flex; gap: .9rem; margin: 0 0 1rem .3rem; }
+.hero__socials a { color: var(--md-default-fg-color--light); display: inline-flex; transition: color .2s, transform .2s; }
+.hero__socials a:hover { color: var(--sage); transform: translateY(-2px); }
+.hero__socials svg { width: 22px; height: 22px; fill: currentColor; }
 
-/* 스펙 하이라이트 배지 */
+.hero__id { display: flex; align-items: center; gap: 1.6rem; flex-wrap: wrap; }
+.hero__photo {
+  width: 128px; height: 128px; border-radius: 50%; object-fit: cover; flex: none;
+  border: 3px solid var(--sage);
+  box-shadow: 0 10px 34px rgba(126,148,99,.35);
+  background: var(--surface);
+}
+.hero__name {
+  font-size: clamp(2.6rem, 7vw, 5rem);
+  font-weight: 800; line-height: 1.02; margin: 0;
+  letter-spacing: -.02em; color: var(--md-default-fg-color);
+}
+.hero__role {
+  margin: .5rem 0 0; font-weight: 700;
+  font-size: clamp(1rem, 2.4vw, 1.4rem); color: var(--hero-role);
+}
+.hero__bio { margin: 1rem 0 0; max-width: 34rem; color: var(--md-default-fg-color--light); font-size: 1rem; font-weight: 500; }
+
+.hero__cta { display: flex; flex-wrap: wrap; gap: .8rem; margin-top: 2.2rem; }
+.hero__cta a {
+  display: inline-flex; align-items: center; gap: .5rem;
+  padding: .75rem 1.35rem; border-radius: .6rem;
+  font-weight: 700; font-size: .98rem; text-decoration: none;
+  color: var(--md-default-fg-color);
+  border: 1.6px solid var(--sage);
+  background: rgba(126,148,99,.10);
+  transition: transform .18s, background .18s, color .18s, border-color .18s;
+}
+.hero__cta a:hover { background: var(--sage); border-color: var(--sage); color: #fff; transform: translateY(-3px); }
+.hero__cta a .arw { opacity: .55; }
+.hero__cta a:hover .arw { opacity: 1; }
+.hero__cta a.is-brown { border-color: var(--oak); background: rgba(154,106,59,.12); }
+.hero__cta a.is-brown:hover { background: var(--oak); border-color: var(--oak); color: #fff; }
+
+/* =====================================================================
+   Components
+   ===================================================================== */
 .badge {
-  display: inline-block;
-  padding: 0.15rem 0.6rem;
-  margin: 0.15rem;
-  border-radius: 999px;
-  font-size: 0.75rem;
-  background: var(--md-primary-fg-color);
-  color: var(--md-primary-bg-color);
+  display: inline-block; padding: .22rem .72rem; margin: .15rem;
+  border-radius: 999px; font-size: .78rem; font-weight: 700;
+  background: rgba(126,148,99,.16); color: var(--sage-deep);
+  border: 1px solid rgba(126,148,99,.4);
+}
+.badge.brown { background: rgba(154,106,59,.14); color: var(--oak-deep); border-color: rgba(154,106,59,.4); }
+
+.md-typeset .md-button { border-color: var(--sage); color: var(--sage-deep); font-weight: 700; border-radius: .5rem; }
+.md-typeset .md-button:hover { background: var(--sage); border-color: var(--sage); color: #fff; }
+.md-typeset .md-button--primary { background: var(--sage); border-color: var(--sage); color: #fff; }
+
+.md-typeset .grid.cards > ul > li,
+.md-typeset .grid.cards > :is(ul,ol) > li {
+  border-radius: .7rem; border-color: var(--border);
+  transition: border-color .2s, transform .2s;
+}
+.md-typeset .grid.cards > ul > li:hover { border-color: var(--sage); transform: translateY(-2px); }
+
+.md-typeset a:hover { color: var(--oak); }
+
+/* =====================================================================
+   GALLERY
+   ===================================================================== */
+.gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 1rem; margin: 1.4rem 0; }
+.gallery figure { margin: 0; border-radius: .7rem; overflow: hidden; border: 1px solid var(--border); background: var(--surface); }
+.gallery figure img { width: 100%; height: 180px; object-fit: cover; display: block; }
+.gallery .ph {
+  height: 180px; display: flex; align-items: center; justify-content: center;
+  color: var(--md-default-fg-color--light); font-weight: 600; font-size: .85rem;
+  background: var(--md-code-bg-color); border-bottom: 1px dashed var(--border);
+}
+.gallery figcaption { padding: .55rem .8rem; font-size: .85rem; color: var(--md-default-fg-color--light); }
+
+.md-typeset .handwriting img { border-radius: .6rem; border: 1px solid var(--border); }
+
+/* =====================================================================
+   Custom top navigation — transparent, green text, right-aligned
+   ===================================================================== */
+.topbar {
+  position: sticky; top: 0; z-index: 20;
+  display: flex; justify-content: flex-end; align-items: center;
+  padding: 1.05rem 1.9rem;
+  background: linear-gradient(to bottom, var(--md-default-bg-color) 42%, transparent);
+  pointer-events: none;
+}
+.topbar__nav { pointer-events: auto; display: flex; gap: 1.5rem; flex-wrap: wrap; justify-content: flex-end; }
+.topbar__nav a {
+  color: var(--sage-deep); font-weight: 700; font-size: .92rem;
+  text-decoration: none; white-space: nowrap; padding: .15rem 0;
+  border-bottom: 2px solid transparent;
+  transition: color .18s, border-color .18s;
+}
+.topbar__nav a:hover { color: var(--oak); }
+.topbar__nav a.is-active { color: var(--sage); border-bottom-color: var(--sage); }
+
+@media (max-width: 48rem) {
+  .topbar { justify-content: center; padding: .7rem 1rem; }
+  .topbar__nav { gap: 1rem; justify-content: center; }
+  .topbar__nav a { font-size: .82rem; }
 }
 
-/* 그리드 카드 살짝 다듬기 */
-.md-typeset .grid.cards > ul > li {
-  border-radius: 0.6rem;
-}
+/* 홈 히어로가 투명 헤더 아래로 자연스럽게 이어지도록 */
+[data-md-color-scheme] .md-header { display: none; }   /* 혹시 남는 기본 헤더 제거 */

@@ -1,11 +1,11 @@
-# 시계열 (Time Series)
+# Time Series
 
-시간에 따라 관측된 데이터의 분석·예측 이론을 정리합니다.
+Notes on analyzing and forecasting data observed over time.
 
-## 목차
+## Contents
 
-- [ARIMA 모형](arima.md)
-- ⟨추가할 주제⟩ — 예: 정상성(Stationarity), ACF/PACF, 지수평활, VAR, GARCH …
+- [ARIMA models](arima.md)
+- ⟨Add topics⟩ — e.g. Stationarity, ACF/PACF, Exponential Smoothing, VAR, GARCH …
 
 !!! tip
-    금융 시계열(수익률, 변동성)과 연결되는 주제는 [금융](../finance/index.md) 섹션과 상호 참조하면 좋습니다.
+    Topics that connect to financial series (returns, volatility) pair well with the [Finance](../finance/index.md) section.

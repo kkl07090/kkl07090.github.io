@@ -1,8 +1,8 @@
-# 금융 (Finance)
+# Finance
 
-투자·리스크 분석에 쓰이는 금융 용어와 핵심 지표를 정리합니다.
+Notes on financial terms and key metrics used in investing and risk analysis.
 
-## 목차
+## Contents
 
-- [핵심 지표 용어](key-metrics.md)
-- ⟨추가할 주제⟩ — 예: 옵션/파생상품, 포트폴리오 이론, VaR, 채권 듀레이션 …
+- [Key Metrics](key-metrics.md)
+- ⟨Add topics⟩ — e.g. Options/derivatives, Portfolio theory, VaR, Bond duration …
