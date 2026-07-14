@@ -1,0 +1,4 @@
+# MkDocs Material 및 필요한 확장
+# 로컬: pip install -r requirements.txt
+mkdocs-material>=9.5.0
+pymdown-extensions>=10.7

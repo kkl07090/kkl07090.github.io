@@ -1,0 +1,17 @@
+# MkDocs 빌드 결과물 (배포는 GitHub Actions가 처리)
+/site/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+
+# macOS
+.DS_Store
+
+# 에디터
+.vscode/
+.idea/
+*.swp
