@@ -7,8 +7,9 @@ backend:
   name: github
   repo: kkl07090/kkl07090.github.io
   branch: main
-  # ↓↓↓ 깃허브 로그인 연동(OAuth) 워커 주소. 아래 설정 가이드대로 만든 뒤 이 줄만 바꾸면 됩니다.
-  base_url: https://REPLACE-WITH-YOUR-WORKER.workers.dev
+  # ↓↓↓ Vercel 중개소 주소. 배포 후 이 줄만 실제 주소로 바꾸면 됩니다.
+  base_url: https://REPLACE-WITH-YOUR-VERCEL-APP.vercel.app
+  auth_endpoint: api/auth
 
 # 이미지가 저장될 저장소 폴더
 media_folder: "docs/assets/img"
