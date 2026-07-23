@@ -1,3 +1,7 @@
+---
+title: Key Metrics
+---
+
 # Key Metrics
 
 Common metrics for evaluating investment performance and risk.

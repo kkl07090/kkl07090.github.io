@@ -1,3 +1,7 @@
+---
+title: ARIMA Models
+---
+
 # ARIMA Models
 
 !!! abstract "Summary"

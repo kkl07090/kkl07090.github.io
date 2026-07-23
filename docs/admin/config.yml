@@ -1,0 +1,83 @@
+# =====================================================================
+#  Sveltia CMS 설정 — 브라우저에서 노트를 편집/작성하는 패널
+#  주소: https://kkl07090.github.io/admin/
+# =====================================================================
+
+backend:
+  name: github
+  repo: kkl07090/kkl07090.github.io
+  branch: main
+  # ↓↓↓ 깃허브 로그인 연동(OAuth) 워커 주소. 아래 설정 가이드대로 만든 뒤 이 줄만 바꾸면 됩니다.
+  base_url: https://REPLACE-WITH-YOUR-WORKER.workers.dev
+
+# 이미지가 저장될 저장소 폴더
+media_folder: "docs/assets/img"
+# 노트 안에서 이미지를 가리키는 주소 (사이트 기준 절대경로 → 어느 폴더의 노트에서도 잘 보임)
+public_folder: "/assets/img"
+
+# 새 노트를 만들 때 자동으로 채워지는 틀 (타이핑 ↔ 사진 번갈아)
+_body_default: &body_default |
+  ## 1. 개념 정리 (타이핑)
+
+  여기에 개념을 글로 적으세요. 수식은 $L(\theta)$ 처럼 달러 기호로 감쌉니다.
+
+  ## 2. 손필기 (사진)
+
+  아래에 손필기 사진을 드래그해서 올리세요. (에디터 툴바의 이미지 버튼도 가능)
+
+  ## 3. 보충 설명 (타이핑)
+
+  사진에서 손으로 푼 내용을 글로 한 번 더 정리하면 복습할 때 좋아요.
+
+collections:
+  - name: ml-dl
+    label: "ML · DL"
+    label_singular: "노트"
+    folder: "docs/ml-dl"
+    create: true
+    slug: "{{slug}}"
+    extension: md
+    format: frontmatter
+    identifier_field: title
+    fields:
+      - { name: title, label: "제목 (왼쪽 메뉴에 표시)", widget: string }
+      - { name: body,  label: "내용 — 타이핑 + 사진 드래그", widget: markdown, default: *body_default }
+
+  - name: time-series
+    label: "Time Series"
+    label_singular: "노트"
+    folder: "docs/time-series"
+    create: true
+    slug: "{{slug}}"
+    extension: md
+    format: frontmatter
+    identifier_field: title
+    fields:
+      - { name: title, label: "제목 (왼쪽 메뉴에 표시)", widget: string }
+      - { name: body,  label: "내용 — 타이핑 + 사진 드래그", widget: markdown, default: *body_default }
+
+  - name: statistics
+    label: "Mathematical Statistics"
+    label_singular: "노트"
+    folder: "docs/statistics"
+    create: true
+    slug: "{{slug}}"
+    extension: md
+    format: frontmatter
+    identifier_field: title
+    fields:
+      - { name: title, label: "제목 (왼쪽 메뉴에 표시)", widget: string }
+      - { name: body,  label: "내용 — 타이핑 + 사진 드래그", widget: markdown, default: *body_default }
+
+  - name: finance
+    label: "Finance"
+    label_singular: "노트"
+    folder: "docs/finance"
+    create: true
+    slug: "{{slug}}"
+    extension: md
+    format: frontmatter
+    identifier_field: title
+    fields:
+      - { name: title, label: "제목 (왼쪽 메뉴에 표시)", widget: string }
+      - { name: body,  label: "내용 — 타이핑 + 사진 드래그", widget: markdown, default: *body_default }

@@ -1,3 +1,7 @@
+---
+title: Gradient Descent
+---
+
 # Gradient Descent
 
 !!! abstract "Summary"

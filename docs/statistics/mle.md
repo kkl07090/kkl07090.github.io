@@ -1,3 +1,7 @@
+---
+title: Maximum Likelihood Estimation (MLE)
+---
+
 # Maximum Likelihood Estimation (MLE)
 
 !!! abstract "Summary"
