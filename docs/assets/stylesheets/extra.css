@@ -200,6 +200,16 @@ body, .md-typeset { font-weight: 500; }
 .md-typeset .photo-slot .photo-slot__label { font-weight: 700; }
 .md-typeset .photo-slot .photo-slot__hint { font-size: .8rem; color: var(--md-default-fg-color--light); }
 
+/* 본문에 삽입한 이미지(손필기 사진 등) 기본 크기·정렬 — 너무 커지지 않게 */
+.md-typeset p > img:not(.twemoji):not(.emojione) {
+  display: block;
+  max-width: min(100%, 520px);
+  height: auto;
+  margin: 1.1rem auto;
+  border-radius: .6rem;
+  border: 1px solid var(--border);
+}
+
 /* =====================================================================
    Custom top navigation — transparent, green text, right-aligned
    ===================================================================== */
