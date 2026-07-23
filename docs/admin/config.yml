@@ -7,8 +7,8 @@ backend:
   name: github
   repo: kkl07090/kkl07090.github.io
   branch: main
-  # ↓↓↓ Vercel 중개소 주소. 배포 후 이 줄만 실제 주소로 바꾸면 됩니다.
-  base_url: https://REPLACE-WITH-YOUR-VERCEL-APP.vercel.app
+  # Vercel 로그인 중개소 주소
+  base_url: https://notes-cms-auth.vercel.app
   auth_endpoint: api/auth
 
 # 이미지가 저장될 저장소 폴더
