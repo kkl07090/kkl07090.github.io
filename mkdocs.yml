@@ -66,6 +66,7 @@ nav:
       - Sample Project: projects/sample-project/index.md
   - Major Knowledge:
       - major-knowledge.md
+      - Note Template: template.md
       - ML · DL:
           - ml-dl/index.md
           - Gradient Descent: ml-dl/gradient-descent.md

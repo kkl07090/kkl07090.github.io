@@ -183,6 +183,22 @@ body, .md-typeset { font-weight: 500; }
 .gallery figcaption { padding: .55rem .8rem; font-size: .85rem; color: var(--md-default-fg-color--light); }
 
 .md-typeset .handwriting img { border-radius: .6rem; border: 1px solid var(--border); }
+.md-typeset figure.handwriting { margin: 1.1rem 0; text-align: center; }
+.md-typeset figure.handwriting figcaption {
+  font-size: .85rem; color: var(--md-default-fg-color--light); margin-top: .45rem;
+}
+
+/* 사진 자리 placeholder — 실제 사진 넣기 전에 "여기 사진 자리"를 보여줌 */
+.md-typeset .photo-slot {
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: .35rem; text-align: center;
+  min-height: 190px; margin: 1.1rem 0; padding: 1.4rem;
+  border: 2px dashed var(--oak-soft); border-radius: .7rem;
+  background: rgba(154,106,59,.06); color: var(--oak-deep);
+}
+.md-typeset .photo-slot .photo-slot__icon { font-size: 1.9rem; line-height: 1; }
+.md-typeset .photo-slot .photo-slot__label { font-weight: 700; }
+.md-typeset .photo-slot .photo-slot__hint { font-size: .8rem; color: var(--md-default-fg-color--light); }
 
 /* =====================================================================
    Custom top navigation — transparent, green text, right-aligned
