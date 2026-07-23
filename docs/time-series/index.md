@@ -1,10 +1,17 @@
-# Time Series
+---
+title: Time Series Introduction
+---
 
-Notes on analyzing and forecasting data observed over time.
+# Time Series Introduction
 
-## Contents
+#### What is time series data?
 
-- ⟨Add topics⟩ — e.g. ARIMA, Stationarity, ACF/PACF, Exponential Smoothing, VAR, GARCH …
+- 시계열 데이터(time series data)란 하나의 대상을 일정한 시간 간격(일.주.월 등)으로 반복 관찰하여 시간 순서대로 늘어놓은 자료이다. 이 자료를 이용하는 경우 거의 대부분의 경우에서 핵심질문을 한 문장으로 줄이자면 "과거가 미래를 얼마나 설명하는가?" 일 것이다.  ex) 삼성전자 종가를 5년간 매 거래일 기록한 것 (일봉)
+- 이와 대비되는 자료는 횡단면 자료(cross-sectional data)가 있다. 이는 한 시점에 여러 대사을 관측한 자료이다. ex) 오늘 하루 코스피200, 200개 종목의 수익률
+- 둘의 차이를 간략히 요약하자면 횡단면 자료는 "한시점 x 여러 개체(i)" 이고 순서를 섞어도 아무일도 일어나지 않는다. 반면 시계열자료는 "한 개체 x 여러 시점(t)" 이고 순서를 섞으면 정보가 파괴된다.
 
-!!! tip
-    Topics that connect to financial series (returns, volatility) pair well with the [Finance](../finance/index.md) section.
+#### Key symbols in time series
+
+![](/assets/img/IMG_7A003BD38D9A-1.jpeg)
+
+> **조건부 평균 : 어제까지의 정보를 총동원 했을때 오늘의 값 y\~t\~와  𝜇와 다른것은 아래첨자 t가 붙어있다는 것이다.**
