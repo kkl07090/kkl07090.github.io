@@ -42,7 +42,7 @@ collections:
     identifier_field: title
     fields:
       - { name: title, label: "제목 (왼쪽 메뉴에 표시)", widget: string }
-      - { name: body,  label: "내용 — 타이핑 + 사진 드래그", widget: markdown, default: *body_default }
+      - { name: body,  label: "내용 — 타이핑 + 사진 드래그", widget: markdown, modes: ["raw"], default: *body_default }
 
   - name: time-series
     label: "Time Series"
@@ -55,7 +55,7 @@ collections:
     identifier_field: title
     fields:
       - { name: title, label: "제목 (왼쪽 메뉴에 표시)", widget: string }
-      - { name: body,  label: "내용 — 타이핑 + 사진 드래그", widget: markdown, default: *body_default }
+      - { name: body,  label: "내용 — 타이핑 + 사진 드래그", widget: markdown, modes: ["raw"], default: *body_default }
 
   - name: statistics
     label: "Mathematical Statistics"
@@ -68,7 +68,7 @@ collections:
     identifier_field: title
     fields:
       - { name: title, label: "제목 (왼쪽 메뉴에 표시)", widget: string }
-      - { name: body,  label: "내용 — 타이핑 + 사진 드래그", widget: markdown, default: *body_default }
+      - { name: body,  label: "내용 — 타이핑 + 사진 드래그", widget: markdown, modes: ["raw"], default: *body_default }
 
   - name: finance
     label: "Finance"
@@ -81,4 +81,4 @@ collections:
     identifier_field: title
     fields:
       - { name: title, label: "제목 (왼쪽 메뉴에 표시)", widget: string }
-      - { name: body,  label: "내용 — 타이핑 + 사진 드래그", widget: markdown, default: *body_default }
+      - { name: body,  label: "내용 — 타이핑 + 사진 드래그", widget: markdown, modes: ["raw"], default: *body_default }
